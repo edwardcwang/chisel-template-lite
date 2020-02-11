@@ -9,6 +9,7 @@ Contents at a glance:
 
 * `.gitignore` - helps Git ignore junk like generated files, build products, and temporary files.
 * `build.sbt` - instructs sbt to build the Chisel project
+* `build.sc` - instructs mill to build the Chisel project
 * `project/build.properties` - sets the sbt version
 * `src/main/scala/gcd/GCD.scala` - GCD source file
 * `src/test/scala/gcd/GCDTester.scala` - GCD tester
@@ -19,6 +20,12 @@ Feel free to rename or delete `src/main/scala/gcd/GCD.scala` and `src/test/scala
 
 To run all tests in this design (recommended for test-driven development):
 
+For mill 0.6.0+:
+```bash
+mill chiselModule.test
+```
+
+For sbt:
 ```bash
 sbt test
 ```
